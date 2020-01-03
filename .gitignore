@@ -1,0 +1,4 @@
+node_modules/
+upload/articles/*.png
+upload/articles/*.jpg
+upload/articles/*.jpeg
