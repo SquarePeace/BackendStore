@@ -9,7 +9,7 @@ var app = express();
 
 //cargar ficheros de rutas
 var article_routes = require('./routes/article');
-
+var user_routes = require('./routes/user');
 //MiddLewares
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
@@ -25,7 +25,7 @@ app.use((req, res, next) => {
 });
 
 //añadir prefijos a rutas y cargar la ruta de acceso
-app.use('/api/',article_routes);
+app.use('/api/',article_routes, user_routes);
 
 //Exportar modulo (fichero actual)
 module.exports = app;
