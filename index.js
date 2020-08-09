@@ -8,7 +8,7 @@ var port = 3900;
 mongoose.set('useFindAndModify', false);
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://localhost:27017/proof', {useNewUrlParser: true})
+mongoose.connect('mongodb+srv://Admin:71hQpGiFgMqh52xw@cluster0.6emu4.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true})
 .then( () => {
 
     console.log('Conectado a la base de datos de prueba!!!');   
@@ -16,7 +16,7 @@ mongoose.connect('mongodb://localhost:27017/proof', {useNewUrlParser: true})
     //creacion del servidor y mensaje del http
     app.listen(port, () => {
 
-        console.log('servidor creado en http://localhost:'+port);
+        //console.log('servidor creado en http://localhost:'+port);
 
     });
 
