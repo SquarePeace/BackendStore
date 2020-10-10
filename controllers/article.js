@@ -215,10 +215,10 @@ var controller ={
         //conseguir nombre y extension del archivo
         var file_path = req.files.file0.path;
         //en WINDOWS
-        var file_split = file_path.split('\\');
+        //var file_split = file_path.split('\\');
 
         //en Linux y MAC OS
-        //var file_split = file_path.split('/');
+        var file_split = file_path.split('/');
         //nombre del archivo
         var file_name = file_split[2];
         //Extension del fichero
