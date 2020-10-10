@@ -8,7 +8,7 @@ var port = 3900;
 mongoose.set('useFindAndModify', false);
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb+srv://Admin:71hQpGiFgMqh52xw@cluster0.6emu4.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true})
+mongoose.connect('mongodb://mongo:27017')
 .then( () => {
 
     console.log('Conectado a la base de datos de prueba!!!');   
