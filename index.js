@@ -6,9 +6,11 @@ var app = require('./app');
 var port = 3900;
 
 mongoose.set('useFindAndModify', false);
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useCreateIndex', true);
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://mongo:27017')
+mongoose.connect('mongodb://mongo:27017', { useUnifiedTopology: true })
 .then( () => {
 
     console.log('Conectado a la base de datos de prueba!!!');   
